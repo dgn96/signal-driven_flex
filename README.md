@@ -5,6 +5,14 @@ This repository was created by Daniel Gutierrez-Navarro (IRENA) under the superv
 
 ## 2) Contents of this repository
 - Folder: raw data
--- Folder: weather
--- Folder: signal
--- Folder: non-flex_demand
+    - Folder: weather
+        - weather_swiss_2019.csv
+        - source.txt
+    - Folder: signal
+        - day_ahead_market_swiss_2019.csv
+        - source.txt
+    - Folder: non-flex_demand
+        - commercial_hour_profile_EMPA.csv
+        - residential_hour_profile_EMPA.csv
+        - source.txt
+    
