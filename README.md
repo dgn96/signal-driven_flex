@@ -24,7 +24,9 @@ This repository was created by Daniel Gutierrez-Navarro (IRENA) under the superv
 - heat_flex.m
 
 ## 2) About this repository
-This repository contains a Linear Program developped in MATLAB for creating signal-driven demand side flexibility for heating profiles. Please refer to the file 'guide_LP.pdf' for more specific information. In the raw data folder you will find the signal (day ahead market in this example), the unprocessed data for the non-flexible heat profiles, and the average outside temperature in Switzerland. Sources for each data set can be cound in the corresponding folder.
+This repository contains a Linear Program developped in MATLAB for creating signal-driven demand side flexibility for heating profiles. Please refer to the file 'guide_LP.pdf' for more specific information. 
+
+In the raw data folder you will find the signal (day ahead market in this example), the unprocessed data for the non-flexible heat profiles, and the average outside temperature in Switzerland. Sources for each data set can be found in the corresponding folder.
 
 The file 'data_wrangling.ipynb' reads the raw data for non-flexible demand and processes it. In the notebook you will find a breif exploratory procedure for each data set (residential and commercial), as well as a processing unit in which parameter extraction and vector normalization are performed. A few figures are depicted to illustrate the quality of the data. After processing the data and appending the signal and the temperature values, the notebook stores the processed data under the directory '.\processed_data\data.csv'. 
 
