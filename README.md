@@ -24,7 +24,11 @@ This repository was created by Daniel Gutierrez-Navarro (IRENA) under the superv
 - heat_flex.m
 
 ## 2) About this repository
-This repository contains a Linear Program developped in MATLAB for creating signal-driven demand side flexibility for heating profiles. Please refer to the file 'guide_LP.pdf' for more specific information. In the raw data folder you will find the signal (day ahead market in this example), 
+This repository contains a Linear Program developped in MATLAB for creating signal-driven demand side flexibility for heating profiles. Please refer to the file 'guide_LP.pdf' for more specific information. In the raw data folder you will find the signal (day ahead market in this example), the unprocessed data for the non-flexible heat profiles, and the average outside temperature in Switzerland. Sources for each data set can be cound in the corresponding folder.
+
+The file 'data_wrangling.ipynb' reads the raw data for non-flexible demand and processes it. In the notebook you will find a breif exploratory procedure for each data set (residential and commercial), as well as a processing unit in which parameter extraction and vector normalization are performed. A few figures are depicted to illustrate the quality of the data. After processing the data and appending the signal and the temperature values, the notebook stores the processed data under the directory '.\processed_data\data.csv'. 
+
+The file 'heat_flex.m' is a function created in MATLAB which contains the Linear Program. The file 'demand-side_flex.m' is a MATLAB script that reads the processed data from the data wrangling notebook, breaks it down in 24 hour day intervals and applies the Linear Program function on 'heat_flex.m'. The results of the Linear Program are stored under the directory '.\results\results_LP.csv'.
 
 ## 3) Software needed to run the content of this repository
 Python 3 and matlab need to be installed in your local disk. The MATLAB linear program uses YALMIP as a syntax toolbox and MOSEK as a solver. YALMIP is free acces and can be downloaded here https://yalmip.github.io/tutorial/installation/
