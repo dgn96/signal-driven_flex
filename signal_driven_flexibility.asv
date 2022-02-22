@@ -1,0 +1,30 @@
+clear all; close all; clc;
+
+%% Read data
+data = readmatrix('.\processed_data\data.csv');
+
+%% Define profiles (this will change depending on the dataset)
+
+% signal
+signal = data(:,10);
+
+% demand profiles
+demand = data(:,2:8);
+
+% Outside temperature
+T0 = data(:,9);
+
+%% For loop
+
+flex = [];
+
+days = 365; % Can change in leap years
+
+j = 1; 
+
+for i = 1:days
+    q = demand((i - 1)*24 + 1:(i - 1)*24 + 24, j);
+    xi = signal((i - 1)*24 + 1:(i - 1)*24 + 24);
+    T = T0((i - 1)*24 + 1:(i - 1)*24 + 24);
+    flex = [flex; heat_flex(xi, q, T)];
+end
