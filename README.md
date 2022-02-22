@@ -43,4 +43,4 @@ Furthermore, YALMIP and MOSEK need to be added as a path in MATLAB. To do so, op
 5) Select folder and click 'Select Folder'
 6) Repeat with the next path
 
-Note that for the LP to work all thre paths need to be added
+Note that for the LP to work all three paths need to be added
